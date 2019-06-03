@@ -84,7 +84,7 @@ class FlashNotifier
      * @param  string|null $level
      * @return $this
      */
-    public function message($message = null, $level = null)
+    public function message($message = null, $level = null, $container = null)
     {
         // If no message was provided, we should update
         // the most recently added message.
@@ -93,7 +93,7 @@ class FlashNotifier
         }
 
         if (! $message instanceof Message) {
-            $message = new Message(compact('message', 'level'));
+            $message = new Message(compact('message', 'level', 'container'));
         }
 
         $this->messages->push($message);
