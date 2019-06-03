@@ -11,7 +11,7 @@ class Message implements \ArrayAccess
      */
     public $title;
 
-    public $bier;
+    public $container;
 
     /**
      * The body of the message.
