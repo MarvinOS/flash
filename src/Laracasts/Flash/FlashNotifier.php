@@ -66,6 +66,12 @@ class FlashNotifier
         return $this->message($message, 'danger');
     }
 
+    public function container($message = null, $level = null, $container)
+    {
+        return $this->updateLastMessage(['container' => $container]);
+    }
+
+
     /**
      * Flash a warning message.
      *
